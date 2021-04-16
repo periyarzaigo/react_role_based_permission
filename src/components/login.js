@@ -117,6 +117,7 @@ const LoginPage = (props) => {
              } else if( Array.isArray(permittedMenuItemsActions) && permittedMenuItemsActions.hasOwnProperty(uniquePerKeys[pi]) ) {
                 actionsArr = permittedMenuItemsActions[uniquePerKeys[pi]];
              }
+             if(Array.isArray(actionsArr)) {
              if(actionsArr.length > 0 ) {
                  let actionsStr = '';
                  for(let ai = 0 ; ai < actionsArr.length; ai++ ) {
@@ -127,6 +128,7 @@ const LoginPage = (props) => {
                  }
                  menuitems_actions_json_updated = menuitems_actions_json_updated + actionsStr;
              }
+            }
              menuitems_actions_json_updated = menuitems_actions_json_updated + ']';          
             }
             menuitems_actions_json_updated = menuitems_actions_json_updated + '}';
